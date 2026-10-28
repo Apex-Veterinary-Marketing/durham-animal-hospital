@@ -19,20 +19,20 @@ const staff = await getAllStaff();
 const clinicBlurbs = [
   {
     heading: "What We Stand For",
-    body: "A short paragraph on why the practice exists and what it's ultimately here to do for pets and their people goes here — replace with real client copy.",
+    body: "We're here so Durham families have a veterinary hospital they can count on for the long haul, one that treats their pets the way they do: as family.",
   },
   {
     heading: "Where We're Headed",
-    body: "A short paragraph on what the practice is working toward — the kind of care it wants to keep building toward over time — goes here.",
+    body: "We want to keep earning a place in our clients' lives for generations of pets, growing our wellness, dental and surgical care while staying the friendly neighborhood hospital Durham knows.",
   },
   {
     heading: "How We Care For Your Pet",
-    body: "A short paragraph on the practice's day-to-day philosophy of care — how appointments feel, what pet owners can expect — goes here.",
+    body: "Every visit starts with listening to you and gently examining your pet from nose to tail. We explain what we find in plain language, share your options, and make a plan together. When your pet is sick, we do our best to see them the same day.",
   },
 ];
 ---
 
-<BaseLayout title="Meet the Team" description="Meet our doctors and staff.">
+<BaseLayout title="Meet the Team" description="Meet Dr. James Miller and the Durham Animal Hospital team caring for dogs and cats in Durham, NC since the 1990s.">
   <PageHeaderBanner heading="Meet the Team" image={bannerGeneric} />
 
   {doctors.length > 0 && (
@@ -56,7 +56,7 @@ const clinicBlurbs = [
 
   <section class="page-section about-staff">
     <h2>About Our Team</h2>
-    <p class="about-staff__body">A paragraph describing the team as a whole goes here — replace with real client copy about the people behind the practice, their experience, and what pet owners can expect when they meet them.</p>
+    <p class="about-staff__body">Dr. James Miller has led Durham Animal Hospital since 1997, after starting his career as an emergency veterinarian here in Durham. He and our small, close-knit team get to know each pet by name. Whether you're bringing in a new puppy or a senior cat, you'll be greeted by familiar faces who care about your pet as much as you do.</p>
   </section>
 
   {staff.length > 0 && (

@@ -33,12 +33,12 @@ const site = await getSiteInfo();
 const socialLinks = await getAllSocialLinks();
 const year = new Date().getFullYear();
 
-const DEDICATED_CATEGORY_IDS = ["dental", "surgery"];
+const DEDICATED_CATEGORY_IDS = ["dental-care", "surgery"];
 const [dentalCategory, surgeryCategory] = await Promise.all(
   DEDICATED_CATEGORY_IDS.map((id) => getServiceCategoryBySlug(id))
 );
 const [dentalServices, surgeryServices, allServices] = await Promise.all([
-  dentalCategory ? getServicesByCategory("dental") : Promise.resolve([]),
+  dentalCategory ? getServicesByCategory("dental-care") : Promise.resolve([]),
   surgeryCategory ? getServicesByCategory("surgery") : Promise.resolve([]),
   getAllServices(),
 ]);

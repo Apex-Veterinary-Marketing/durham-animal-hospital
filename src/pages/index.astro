@@ -28,11 +28,11 @@ const featuredServices = await getFeaturedServices();
 const testimonials = await getAllTestimonials();
 ---
 
-<BaseLayout title={`${site.practiceName} | Veterinary Care`} titleTemplate="full" description={`Compassionate veterinary care from ${site.practiceName}.`}>
+<BaseLayout title={`Veterinarian in Durham, NC | ${site.practiceName}`} titleTemplate="full" description="Durham Animal Hospital offers wellness exams, vaccines, dental care, diagnostics and surgery for dogs and cats on N Roxboro St in Durham, NC.">
   <Hero
     eyebrow="Welcome to"
     heading={site.practiceName}
-    subheading="Compassionate, comprehensive care for every stage of your pet's life."
+    subheading="Where pets are family: wellness, dentistry and surgery on N Roxboro St in Durham."
     ctaText={site.bookingLabel || "Book Now"}
     ctaHref={site.bookingUrl || "/contact-us"}
     secondaryCtaText="Our Services"
@@ -42,7 +42,7 @@ const testimonials = await getAllTestimonials();
 
   <div data-reveal>
     <FeatureSplit heading="About Us" ctaText="Meet the Team" ctaHref="/meet-the-team">
-      <p>A short introduction to the practice goes here — replace with real client copy about who you are, how long you've served the area, and what pet owners can expect.</p>
+      <p>For nearly three decades, Durham Animal Hospital has cared for the dogs and cats of Durham and nearby towns like Rougemont, Creedmoor and Hillsborough. Dr. James Miller and our small team know many of our patients from their first puppy and kitten visits through their senior years. You'll find us on N Roxboro St, directly behind Captain D's.</p>
     </FeatureSplit>
   </div>
 
@@ -57,7 +57,7 @@ const testimonials = await getAllTestimonials();
 
   <div data-reveal>
     <FeatureSplit heading="Why Choose Us" ctaText="Our Services" ctaHref="/services" reverse>
-      <p>A short paragraph about the practice's approach to care goes here — replace with real client copy.</p>
+      <p>We focus on the care that keeps pets well: thorough exams and vaccines, dental cleanings and oral surgery, and surgical procedures from spays to fracture repair, backed by digital radiology and an in-house lab. When your pet is sick, we do our best to fit them in the same day. We accept CareCredit, Cherry and Trupanion pet insurance, so cost doesn't have to stand between your pet and the care they need.</p>
     </FeatureSplit>
   </div>
 

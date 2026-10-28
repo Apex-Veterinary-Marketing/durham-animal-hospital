@@ -45,28 +45,28 @@
   /* --- Neutrals & text --------------------------------------------------- */
   --white: #ffffff; /* page/card surface; text on dark */
   --text: #333333; /* body copy */
-  --text-muted: #606f87; /* captions, meta, placeholders — brand hue, always
+  --text-muted: #597285; /* captions, meta, placeholders — brand hue, always
                       visibly lighter than --text, AA on every light bg */
   --light-grey: #d1d1d1; /* neutral borders/dividers */
 
   /* --- Backgrounds (very soft, brand-tinted) ----------------------------- */
-  --solid-bg: #f3f5f8; /* soft section/card/hover background (opaque) */
-  --base-bg: #e8ecf17a; /* same tint @48% — for layering over images/other bgs */
-  --alt-bg: #1f304bcc; /* dark brand tint @80% — dark section over an image/pattern
+  --solid-bg: #f2f5f8; /* soft section/card/hover background (opaque) */
+  --base-bg: #e9eef27a; /* same tint @48% — for layering over images/other bgs */
+  --alt-bg: #053d66cc; /* dark brand tint @80% — dark section over an image/pattern
                           (white text stays AA even over a white page) */
 
   /* --- Brand ------------------------------------------------------------- */
-  --main: #16253c; /* primary brand; headings, links, primary buttons */
-  --main-dark: #070c13; /* darkest brand; footer bg, deep sections, hovers */
-  --main-light: #385f99; /* lighter brand; accents, focus ring, link hover */
-  --main-soft: #394b65; /* muted brand; subtle fills, borders on dark */
-  --cta: #008484; /* the action color: primary CTA buttons (white text is AA on it) */
-  --cta-hover: #00191a; /* CTA hover/pressed */
+  --main: #004578; /* primary brand; headings, links, primary buttons */
+  --main-dark: #000f19; /* darkest brand; footer bg, deep sections, hovers */
+  --main-light: #0072c7; /* lighter brand; accents, focus ring, link hover */
+  --main-soft: #276b9d; /* muted brand; subtle fills, borders on dark */
+  --cta: #00c9b6; /* the action color: primary CTA buttons (white text is AA on it) */
+  --cta-hover: #00fce4; /* CTA hover/pressed */
 
   /* --- Translucent siblings & effects ------------------------------------ */
   --white-o85: #ffffffd9; /* white @85% — text on dark, glass panels */
-  --main-o50: #16253c80; /* --main @50% — image scrims, tinted overlays */
-  --main-soft-o50: #394b6580; /* --main-soft @50% */
+  --main-o50: #00457880; /* --main @50% — image scrims, tinted overlays */
+  --main-soft-o50: #276b9d80; /* --main-soft @50% */
   --overlay-color: #00000080; /* black @50% — modal/hero scrim */
   --shadow: #0000001a; /* black @10% — the shadow COLOR (see --shadow-* below) */
 
@@ -78,7 +78,7 @@
    * ---------------------------------------------------------------------- */
   --heading: var(--main); /* h1-h6 color */
   --on-main: var(--white); /* text/icons on --main surfaces */
-  --on-cta: var(--white); /* text/icons on --cta buttons. The generator sets this
+  --on-cta: var(--main-dark); /* text/icons on --cta buttons. The generator sets this
                             to --main-dark instead when the brand accent is too
                             light for white text. */
   --focus-ring: var(--main-light); /* :focus-visible outline color */

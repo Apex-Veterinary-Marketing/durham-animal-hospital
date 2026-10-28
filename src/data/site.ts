@@ -80,32 +80,40 @@ export interface SiteInfo {
 // so components/pages have something real to render while the skeleton is
 // being built and reviewed.
 export const siteInfo: SiteInfo = {
-  practiceName: "[Practice Name]",
-  phoneNumber: "(000) 000-0000",
-  email: "hello@example.com",
-  address: "123 Main St",
-  addressLine2: "[City, ST 00000]",
+  practiceName: "Durham Animal Hospital",
+  businessSchemaType: "VeterinaryCare",
+  phoneNumber: "(919) 620-7387",
+  callTrackingNumber: "+19842533420",
+  address: "4306 N Roxboro St",
+  addressLine2: "Durham, NC 27704",
+  addressLocality: "Durham",
+  addressRegion: "NC",
+  postalCode: "27704",
+  addressLink:
+    "https://www.google.com/maps/search/?api=1&query=Durham+Animal+Hospital%2C+4306+N+Roxboro+St%2C+Durham%2C+NC+27704",
+  mapEmbedLink:
+    "https://maps.google.com/maps?q=Durham+Animal+Hospital%2C+4306+N+Roxboro+St%2C+Durham%2C+NC+27704&output=embed",
+  serviceAreaOfCoverage:
+    "Durham, Rougemont, Hurdle Mills, Creedmoor, Roxboro, Chapel Hill, Raleigh, Hillsborough",
   bookingUrl: "/appointment-request",
-  bookingLabel: "Book Now",
-  cityState: "[City, ST]",
-  hours: "<p>Mon&ndash;Fri: 8am&ndash;6pm<br>Sat: 9am&ndash;1pm<br>Sun: Closed</p>",
-  // Exactly 160 characters — replace during client intake with real copy.
+  bookingLabel: "Request an Appointment",
+  businessDescription:
+    "Durham Animal Hospital is a full-service veterinary hospital in Durham, NC, caring for dogs and cats since 1996 with wellness exams, diagnostics, dentistry and surgery.",
+  openingHoursSpecification: [
+    { dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], opens: "08:00", closes: "17:30" },
+  ],
+  cityState: "Durham, NC",
+  hours:
+    "<p>Mon&ndash;Fri: 8:00am&ndash;5:30pm<br>Sat&ndash;Sun: Closed</p><p>Please call for doctor&rsquo;s appointment hours.</p>",
+  afterHours:
+    "<p>Triangle Veterinary Referral Hospital<br>608 Morreene Rd, Durham, NC 27705<br>(919) 489-0615</p>",
+  // Exactly 160 characters.
   footerAbout:
-    "[Practice Name] provides compassionate, high-quality veterinary care for dogs, cats, and other companion animals throughout [City, ST] and the surrounding area.",
-  // Example values — replace during client intake. Kept non-empty (same
-  // reasoning as the other placeholder fields above) so ReputationWidget's
-  // "leave a public review" stage actually has links to render instead of
-  // silently filtering all three out.
-  googleReviewsLink: "https://g.page/r/example/review",
-  facebookReviewsLink: "https://www.facebook.com/example/reviews",
-  yelpReviewLink: "https://www.yelp.com/biz/example",
-  googleRating: 4.8, // example value — matches the real V2 export's placeholder rating
-  googleReviewCount: 120, // example value only, not sourced from anywhere real
-  url: "https://example.com", // REPLACE with the real domain before launch — see the field comment above
-  // Placeholder mark + wordmark (scripts/generate-logo-placeholders.mjs) —
-  // proves Header's crossfade renders end-to-end. REPLACE both with the
-  // client's real logo files before launch (same public/ paths, or update
-  // these to point at new ones).
-  logoWhite: "/logo-white.svg",
-  logoColor: "/logo-color.svg",
+    "Durham Animal Hospital has cared for Durham dogs and cats since 1996, offering wellness exams, diagnostics, dental care, and surgery from a team that knows you.",
+  googleReviewsLink: "https://www.google.com/maps?cid=5175159158433168978",
+  facebookReviewsLink: "https://www.facebook.com/durhamanimalhospital/reviews",
+  // REPLACE with the real domain at launch (the old site's address, until DNS moves).
+  url: "https://durhamanimalhospital.com",
+  logoWhite: "/logo-white.png",
+  logoColor: "/logo-color.png",
 };

@@ -12,12 +12,15 @@ export interface Props {
   doctor: CollectionEntry<"doctors">;
 }
 const { doctor } = Astro.props;
+// No headshot yet → a branded monogram instead of a generic avatar.
+const initials = doctor.data.name.replace(/^Dr\.?\s+/i, "").replace(/,.*$/, "").split(/\s+/).filter((w) => /^[A-Za-z]/.test(w)).map((w) => w[0]).filter((_, i, a) => i === 0 || i === a.length - 1).join("").toUpperCase();
 ---
 
 <a class="doctor-card" href={`/doctors/${doctor.id}`}>
   {doctor.data.mainImage && (
     <Image src={doctor.data.mainImage} alt={doctor.data.imageAltText || doctor.data.name} class="doctor-card__image" />
   )}
+  {!doctor.data.mainImage && <span class="doctor-card__monogram" aria-hidden="true">{initials}</span>}
   <h3 class="doctor-card__name">{doctor.data.shortName || doctor.data.name}</h3>
   {doctor.data.bioShort && <p class="doctor-card__bio" set:html={doctor.data.bioShort} />}
 </a>
@@ -25,6 +28,7 @@ const { doctor } = Astro.props;
 <style>
   .doctor-card { display: flex; flex-direction: column; gap: var(--space-sm); text-decoration: none; color: inherit; }
   .doctor-card__image { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; border-radius: var(--radius-md); }
+  .doctor-card__monogram { display: grid; place-items: center; width: 100%; aspect-ratio: 1 / 1; border-radius: var(--radius-md); background: var(--solid-bg); color: var(--main); font-family: var(--font-heading); font-size: var(--font-size-4xl); font-weight: 700; }
   .doctor-card__name { margin: 0; font-size: var(--font-size-md); }
   .doctor-card__bio { margin: 0; font-size: var(--font-size-sm); color: var(--text-muted); }
 </style>
