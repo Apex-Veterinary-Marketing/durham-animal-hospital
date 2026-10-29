@@ -18,7 +18,7 @@ serviceCategory: ["diagnostic-care"]
 featured: false
 showOnSidebarMenu: true
 metaTitle: "Durham Animal Hospital - Digital Radiology"
-metaDescription: "Advanced digital radiology in Durham, NC for fast, accurate pet diagnostics. Schedule your pet’s X-rays with Durham Animal Hospital’s trusted veterinary team."
+metaDescription: "Advanced digital radiology in Durham, NC for fast, accurate pet diagnostics. Schedule your pet's X-rays with Durham Animal Hospital's trusted team."
 faqs:
   - question: "What is digital radiology and how does it benefit my pet?"
     answer: "<p>Digital radiology uses advanced technology to capture high-quality X-ray images quickly and safely. This allows our veterinarians to diagnose conditions more accurately and begin treatment sooner. At Durham Animal Hospital, digital radiology helps us detect injuries, organ issues, and illnesses early, leading to better outcomes for your pet.</p>"

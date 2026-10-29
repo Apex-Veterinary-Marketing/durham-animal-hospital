@@ -1,7 +1,8 @@
 ---
 name: "Winter & Holiday Pet Care Tips for Durham Pets: Keeping Your Dogs & Cats Safe This Season"
 pubDate: 2025-12-02
-metaDescription: "Winter & Holiday Pet Care Tips for Durham Pets: Keeping Your Dogs & Cats Safe This Season - Winter in Durham: Mild Weather, Real Pet Risks"
+titleTag: "Winter & Holiday Pet Care Tips for Durham Pets"
+metaDescription: "Winter and holiday pet care tips for Durham dogs and cats: cold-weather safety, holiday food and decoration hazards, and when to call your veterinarian."
 postSummary: "Winter & Holiday Pet Care Tips for Durham Pets: Keeping Your Dogs & Cats Safe This Season – Winter in Durham may be milder than other parts of the country, but cooler temperatures, early sunsets, holiday gatherings,…"
 postThumbnail: "../../assets/blog/winter-holiday-pet-care-tips-for-durham-pets-keeping-your-dogs-cats-safe-this-season.jpg"
 thumbnailAlt: "Orange cat stretching out on a sofa"

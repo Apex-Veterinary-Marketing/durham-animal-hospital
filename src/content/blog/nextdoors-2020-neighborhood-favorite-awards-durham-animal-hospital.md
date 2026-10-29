@@ -1,6 +1,7 @@
 ---
 name: "Nextdoor’s 2020 Neighborhood Favorite Awards – Durham Animal Hospital"
 pubDate: 2020-02-03
+titleTag: "Nextdoor 2020 Neighborhood Favorite: Durham Animal Hospital"
 metaDescription: "Vote for us as your Neighborhood Favorite Veterinarian in Durham! Nextdoor’s 2020 Neighborhood Favorite Awards - Durham Animal Hospital"
 postSummary: "Vote for us as your Neighborhood Favorite Veterinarian in Durham!"
 postThumbnail: "../../assets/blog/nextdoors-2020-neighborhood-favorite-awards-durham-animal-hospital.jpg"

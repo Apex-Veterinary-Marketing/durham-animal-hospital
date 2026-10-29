@@ -23,7 +23,7 @@ Although ear mites are a very treatable condition, complications can arise if yo
 
 -   Ear mites are highly contagious and pets who venture outdoors are especially vulnerable. If your pet comes in contact with another animal who has ear mites, your pet may also become infected.
 -   Since they are so contagious if you have multiple pets and one is infected, chances are the others will be as well.
--   Mites can also be passed from parent to newborn if the parent is already infected. For example, if you ever bring an abandoned kitten into your home from outside, chances are they’ll have ear mites.
+-   Mites can also be passed from parent to newborn if the parent is already infected. For instance, if you ever bring an abandoned kitten into your home from outside, chances are they’ll have ear mites.
 
 ### Signs/Symptoms:
 

@@ -2,7 +2,7 @@
 name: "Human Foods Your Dog Should Never Eat"
 pubDate: 2015-12-31
 titleTag: "Human Foods Your Dog Should Never Eat"
-metaDescription: "Some human foods can make your dog really sick. If you are offering a treat, here are some you need to avoid."
+metaDescription: "Some human foods can make your dog really sick. Before you share a treat, learn which foods to avoid, from the veterinary team at Durham Animal Hospital."
 postSummary: "Most dog owners love to lavish their pets with love, and sometimes that love is in the form of table food. While the"
 postThumbnail: "../../assets/blog/human-foods-your-dog-should-never-eat.jpg"
 thumbnailAlt: "Smiling Dalmatian on a blanket in a sunny room"

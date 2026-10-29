@@ -1,6 +1,7 @@
 ---
 name: "Pet Allergies in Durham NC: Signs, Causes, and Treatment Options for Dogs and Cats"
 pubDate: 2026-06-02
+titleTag: "Pet Allergies in Durham, NC: Signs, Causes & Treatment"
 metaDescription: "Pet Allergies in Durham, NC: Learn the signs, causes, and treatment options for dog and cat allergies. Get expert veterinary care."
 postSummary: "Pet Allergies in Durham NC: Signs, Causes, and Treatment Options for Dogs and Cats | As a veterinarian who has cared for pets in Durham for many years, I’ve noticed a predictable pattern every spring and summer."
 postThumbnail: "../../assets/blog/pet-allergies-in-durham-nc-signs-causes-and-treatment-options-for-dogs-and-cats.jpg"

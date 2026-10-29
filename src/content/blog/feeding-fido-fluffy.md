@@ -2,7 +2,7 @@
 name: "Feeding Fido & Fluffy"
 pubDate: 2016-02-23
 titleTag: "Feeding Fido & Fluffy"
-metaDescription: "When it comes to feeding the four-legged family members, what is the best food?"
+metaDescription: "What's the best food for your dog or cat? Durham Animal Hospital explains how to choose a diet that fits your pet's age, size and health needs."
 postSummary: "When it comes to feeding the four-legged family members, what is the best food?"
 postThumbnail: "../../assets/blog/feeding-fido-fluffy.jpg"
 thumbnailAlt: "Dachshund and a black-and-white cat on a rug"

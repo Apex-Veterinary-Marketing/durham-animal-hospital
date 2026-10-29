@@ -20,7 +20,7 @@ featuredHeading: "Spay & Neuter"
 featuredText: "Safe, routine surgery with careful anesthesia monitoring and recovery care."
 showOnSidebarMenu: true
 metaTitle: "Durham Animal Hospital - Spay & Neuter"
-metaDescription: "Spay & neuter surgery in Durham, NC. Durham Animal Hospital offers safe, compassionate procedures for dogs & cats. Schedule your pet's appointment today."
+metaDescription: "Spay and neuter surgery in Durham, NC. Durham Animal Hospital offers safe, compassionate procedures for dogs and cats. Schedule your pet's appointment today."
 faqs:
   - question: "What are the benefits of spaying or neutering my pet?"
     answer: "<p>Spaying and neutering your pet reduces the risk of certain cancers, prevents unwanted litters, and can improve behavior. Durham Animal Hospital’s surgical team ensures your pet receives the highest level of care and safety throughout the procedure.</p>"
