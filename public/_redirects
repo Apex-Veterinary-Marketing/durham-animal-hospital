@@ -14,12 +14,12 @@
 /durham/                                                               /reviews/                                                            301
 /services/your-first-visit                                             /your-first-visit/                                           301
 /services/your-first-visit/                                            /your-first-visit/                                           301
-/services/your-first-visit/new-client-form                             /your-first-visit/                                           301
-/services/your-first-visit/new-client-form/                            /your-first-visit/                                           301
-/new-client-form                                                       /your-first-visit/                                           301
-/new-client-form/                                                      /your-first-visit/                                           301
-/register-your-pet                                                     /your-first-visit/                                           301
-/register-your-pet/                                                    /your-first-visit/                                           301
+/services/your-first-visit/new-client-form                             /online-forms/                                               301
+/services/your-first-visit/new-client-form/                            /online-forms/                                               301
+/new-client-form                                                       /online-forms/                                               301
+/new-client-form/                                                      /online-forms/                                               301
+/register-your-pet                                                     /online-forms/                                               301
+/register-your-pet/                                                    /online-forms/                                               301
 /pet-surgery-services                                                  /services-categories/surgery/                                301
 /pet-surgery-services/                                                 /services-categories/surgery/                                301
 /veterinary-medical-care                                               /services/                                                   301
@@ -109,3 +109,5 @@
 /your-new-puppys-first-vet-visit-what-to-expect                        /blog/your-new-puppys-first-vet-visit-what-to-expect/        301
 /your-new-puppys-first-vet-visit-what-to-expect/                       /blog/your-new-puppys-first-vet-visit-what-to-expect/        301
 /blog/page/*                                                           /blog/                                                       301
+/appointment-request                                                   https://pp.thevethero.com/durham-animal-hospital/login       301
+/appointment-request/                                                  https://pp.thevethero.com/durham-animal-hospital/login       301

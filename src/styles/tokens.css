@@ -57,7 +57,7 @@
 
   /* --- Brand ------------------------------------------------------------- */
   --main: #004578; /* primary brand; headings, links, primary buttons */
-  --main-dark: #000f19; /* darkest brand; footer bg, deep sections, hovers */
+  --main-dark: #004578; /* darkest brand; footer bg, deep sections, hovers — Durham: hand-set to the logo/old-site navy (Constanza found #000f19 too dark) */
   --main-light: #0072c7; /* lighter brand; accents, focus ring, link hover */
   --main-soft: #276b9d; /* muted brand; subtle fills, borders on dark */
   --cta: #00c9b6; /* the action color: primary CTA buttons (white text is AA on it) */
