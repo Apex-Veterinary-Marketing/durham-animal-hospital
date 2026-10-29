@@ -11,13 +11,14 @@ export interface Props {
 }
 const { tone = "light", headingClass = "" } = Astro.props;
 const { site, landmark, serviceArea, payment } = await getHomeData();
+const street = (site.address ?? "").replace(/^\d+\s+/, ""); // "4306 N Roxboro St" -> "N Roxboro St"
 ---
 
 <section class:list={["visit", `visit--${tone}`]}>
   <div class="visit__inner">
     <div class="visit__copy" data-reveal>
       <span class="eyebrow">Plan your visit</span>
-      <h2 class:list={["visit__title", headingClass]}>Easy to find on N Roxboro St</h2>
+      <h2 class:list={["visit__title", headingClass]}>{street ? `Easy to find on ${street}` : "Plan your visit"}</h2>
       <dl class="visit__facts">
         <div>
           <dt>Address</dt>
