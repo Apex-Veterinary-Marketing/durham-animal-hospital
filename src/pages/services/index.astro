@@ -7,13 +7,13 @@ import PageHeaderBanner from "../../components/PageHeaderBanner.astro";
 import ServiceGrid from "../../components/ServiceGrid.astro";
 import ServicesSidebar from "../../components/ServicesSidebar.astro";
 import { getAllServices } from "../../lib/data/services";
-import bannerGeneric from "../../assets/banner-generic.png";
+import bannerPhoto from "../../assets/services/photos/service-3-cover.jpg";
 
 const services = await getAllServices();
 ---
 
 <BaseLayout title="Our Services" description="Veterinary services at Durham Animal Hospital in Durham, NC: wellness exams, vaccines, digital radiology, lab work, dental care and surgery for dogs and cats.">
-  <PageHeaderBanner heading="Veterinary Services" image={bannerGeneric} />
+  <PageHeaderBanner heading="Veterinary Services" image={bannerPhoto} imageAlt="Small tan dog looking up on a wooden deck" />
   <div class="services-layout">
     <div class="page-section">
       <ServiceGrid services={services} />

@@ -1,7 +1,7 @@
 ---
 name: "Hip Dysplasia Surgery"
 customName: "Hip Dysplasia"
-serviceIcon: "../../assets/services/icons/orthopedics.svg"
+serviceIcon: "../../assets/services/icons/hip-dysplasia.svg"
 pageHeaderImage: "../../assets/services/photos/service-12-cover.jpg"
 pageHeaderImageAlt: "Black cat sitting on a blue sofa"
 contentBlocks:

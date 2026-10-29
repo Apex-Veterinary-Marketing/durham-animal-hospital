@@ -1,7 +1,7 @@
 ---
 name: "Diagnostic Laboratory"
 customName: "Diagnostic Lab"
-serviceIcon: "../../assets/services/icons/laboratory.png"
+serviceIcon: "../../assets/services/icons/laboratory.svg"
 pageHeaderImage: "../../assets/services/photos/service-6-cover.jpg"
 pageHeaderImageAlt: "Black-and-white cat and a golden dog side by side"
 contentBlocks:

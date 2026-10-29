@@ -1,7 +1,7 @@
 ---
 name: "Teeth Cleaning - Preventing Gingivitis"
 customName: "Teeth Cleaning"
-serviceIcon: "../../assets/services/icons/dental-cleaning.png"
+serviceIcon: "../../assets/services/icons/dental-cleaning.svg"
 pageHeaderImage: "../../assets/services/photos/service-7-cover.jpg"
 pageHeaderImageAlt: "Dachshund sitting on a yellow armchair"
 contentBlocks:

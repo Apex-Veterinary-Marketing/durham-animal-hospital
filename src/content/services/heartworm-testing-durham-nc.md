@@ -1,7 +1,7 @@
 ---
 name: "Heartworm Testing"
 customName: "Heartworm Testing"
-serviceIcon: "../../assets/services/icons/heartworm.png"
+serviceIcon: "../../assets/services/icons/heartworm.svg"
 pageHeaderImage: "../../assets/services/photos/service-3-cover.jpg"
 pageHeaderImageAlt: "Small tan dog looking up on a wooden deck"
 contentBlocks:

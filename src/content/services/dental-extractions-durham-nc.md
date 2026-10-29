@@ -1,7 +1,7 @@
 ---
 name: "Dental Extractions"
 customName: "Extractions"
-serviceIcon: "../../assets/services/icons/teeth-extractions.png"
+serviceIcon: "../../assets/services/icons/teeth-extractions.svg"
 pageHeaderImage: "../../assets/services/photos/service-8-cover.jpg"
 pageHeaderImageAlt: "Gray-and-white cat looking out a window"
 contentBlocks:
