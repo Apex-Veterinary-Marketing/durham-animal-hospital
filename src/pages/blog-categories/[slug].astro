@@ -13,6 +13,7 @@ import PageHeaderBanner from "../../components/PageHeaderBanner.astro";
 import BlogGrid from "../../components/BlogGrid.astro";
 import { getAllBlogCategories, getBlogCategoryBySlug } from "../../lib/data/blogCategories";
 import { getPostsByCategory } from "../../lib/data/blog";
+import bannerPhoto from "../../assets/site/banners/dog-157.jpg";
 
 export async function getStaticPaths() {
   const categories = await getAllBlogCategories();
@@ -28,7 +29,7 @@ const posts = await getPostsByCategory(category.id);
 ---
 
 <BaseLayout title={category.data.name} description={`${category.data.name} articles from Durham Animal Hospital in Durham, NC, with practical advice to help you keep your dog or cat healthy and happy.`}>
-  <PageHeaderBanner heading={category.data.name} />
+  <PageHeaderBanner heading={category.data.name} image={bannerPhoto} imageAlt="Small dog resting on a bed" />
   <div class="page-section">
     {posts.length > 0 ? (
       <BlogGrid posts={posts} />

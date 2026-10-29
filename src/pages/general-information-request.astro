@@ -7,12 +7,13 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import PageHeaderBanner from "../components/PageHeaderBanner.astro";
 import GravityFormEmbed from "../components/GravityFormEmbed.astro";
 import { getSiteInfo } from "../lib/data/site";
+import bannerPhoto from "../assets/site/banners/cat-59.jpg";
 
 const site = await getSiteInfo();
 ---
 
 <BaseLayout title="General Information Request" description="Have a question for Durham Animal Hospital? Send our Durham, NC team a general information request and we'll get back to you as soon as we can.">
-  <PageHeaderBanner heading="General Information" />
+  <PageHeaderBanner heading="General Information" image={bannerPhoto} imageAlt="Cat sitting on the exam table beside a veterinarian" />
   <div class="page-section">
     {site.hours && (
       <div id="hours" class="page-section__hours">

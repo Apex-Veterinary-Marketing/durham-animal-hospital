@@ -5,12 +5,13 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 import PageHeaderBanner from "../../components/PageHeaderBanner.astro";
 import BlogGrid from "../../components/BlogGrid.astro";
 import { getAllPosts } from "../../lib/data/blog";
+import bannerPhoto from "../../assets/site/banners/cat-42.jpg";
 
 const posts = await getAllPosts();
 ---
 
 <BaseLayout title="Our Blog" description="Pet care tips and hospital news from Durham Animal Hospital in Durham, NC, covering seasonal safety, allergies, dental health and keeping pets well.">
-  <PageHeaderBanner heading="Our Blog" />
+  <PageHeaderBanner heading="Our Blog" image={bannerPhoto} imageAlt="Abyssinian cat sleeping on a couch" />
   <div class="page-section">
     {posts.length > 0 ? (
       <BlogGrid posts={posts} />

@@ -3,10 +3,11 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import PageHeaderBanner from "../components/PageHeaderBanner.astro";
 import GravityFormEmbed from "../components/GravityFormEmbed.astro";
 import LocationSection from "../components/LocationSection.astro";
+import bannerPhoto from "../assets/site/banners/dog-134.jpg";
 ---
 
 <BaseLayout title="Contact Us" description="Contact Durham Animal Hospital at 4306 N Roxboro St in Durham, NC. Call (919) 620-7387 or send us a message, open Monday through Friday, 8am to 5:30pm.">
-  <PageHeaderBanner heading="Contact Us" />
+  <PageHeaderBanner heading="Contact Us" image={bannerPhoto} imageAlt="Veterinarian holding a beagle puppy" />
   <div class="page-section">
     <GravityFormEmbed formId="contact" context="contact" heading="Send Us a Message" />
   </div>
