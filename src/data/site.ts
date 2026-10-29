@@ -138,7 +138,8 @@ export const siteInfo: SiteInfo = {
   // Exactly 160 characters.
   footerAbout:
     "Durham Animal Hospital has cared for Durham dogs and cats since 1996, offering wellness exams, diagnostics, dental care, and surgery from a team that knows you.",
-  googleReviewsLink: "https://www.google.com/maps?cid=5175159158433168978",
+  // Opens the Google "write a review" box for this location (Place ID from Constanza, 2026-10-29).
+  googleReviewsLink: "https://search.google.com/local/writereview?placeid=ChIJEa4AHkvirIkRUr6E3tXb0Uc",
   facebookReviewsLink: "https://www.facebook.com/durhamanimalhospital/reviews",
   // REPLACE with the real domain at launch (the old site's address, until DNS moves).
   url: "https://durhamanimalhospital.com",

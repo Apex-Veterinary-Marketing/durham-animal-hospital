@@ -104,10 +104,13 @@
 /tips-for-traveling-with-pets/                                         /blog/tips-for-traveling-with-pets/                          301
 /winter-holiday-pet-care-tips-for-durham-pets-keeping-your-dogs-cats-safe-this-season /blog/winter-holiday-pet-care-tips-for-durham-pets-keeping-your-dogs-cats-safe-this-season/ 301
 /winter-holiday-pet-care-tips-for-durham-pets-keeping-your-dogs-cats-safe-this-season/ /blog/winter-holiday-pet-care-tips-for-durham-pets-keeping-your-dogs-cats-safe-this-season/ 301
-/you-your-pet-and-covid-19                                             /blog/you-your-pet-and-covid-19/                             301
-/you-your-pet-and-covid-19/                                            /blog/you-your-pet-and-covid-19/                             301
+/you-your-pet-and-covid-19                                             /blog/                                                       301
+/you-your-pet-and-covid-19/                                            /blog/                                                       301
 /your-new-puppys-first-vet-visit-what-to-expect                        /blog/your-new-puppys-first-vet-visit-what-to-expect/        301
 /your-new-puppys-first-vet-visit-what-to-expect/                       /blog/your-new-puppys-first-vet-visit-what-to-expect/        301
 /blog/page/*                                                           /blog/                                                       301
 /appointment-request                                                   https://pp.thevethero.com/durham-animal-hospital/login       301
 /appointment-request/                                                  https://pp.thevethero.com/durham-animal-hospital/login       301
+# Retired post (named a doctor who is no longer with the practice, 2026-10-29).
+/blog/you-your-pet-and-covid-19                                        /blog/                                                       301
+/blog/you-your-pet-and-covid-19/                                       /blog/                                                       301
