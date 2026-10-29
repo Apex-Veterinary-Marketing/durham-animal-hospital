@@ -11,7 +11,7 @@ import DoctorGrid from "../components/DoctorGrid.astro";
 import StaffGrid from "../components/StaffGrid.astro";
 import { getAllDoctors } from "../lib/data/doctors";
 import { getAllStaff } from "../lib/data/staff";
-import bannerGeneric from "../assets/banner-generic.png";
+import bannerPhoto from "../assets/durham/cat-and-golden-dog.jpg";
 
 const doctors = await getAllDoctors();
 const staff = await getAllStaff();
@@ -33,38 +33,43 @@ const clinicBlurbs = [
 ---
 
 <BaseLayout title="Meet the Team" description="Meet Dr. James Miller and the Durham Animal Hospital team caring for dogs and cats in Durham, NC since the 1990s.">
-  <PageHeaderBanner heading="Meet the Team" image={bannerGeneric} />
+  <PageHeaderBanner heading="Meet the Team" image={bannerPhoto} imageAlt="Black-and-white cat and a golden dog side by side" />
 
-  {doctors.length > 0 && (
-    <section class="page-section">
-      <h2>Our Doctors</h2>
-      <DoctorGrid doctors={doctors} />
-    </section>
-  )}
+  <section class="page-section team">
+    <div class="team__intro">
+      <span class="eyebrow">About our team</span>
+      <h2>Familiar faces who know your pet by name</h2>
+      <p class="about-staff__body">Dr. James Miller has led Durham Animal Hospital since 1997, after starting his career as an emergency veterinarian here in Durham. He and our small, close-knit team get to know each pet by name. Whether you're bringing in a new puppy or a senior cat, you'll be greeted by familiar faces who care about your pet as much as you do.</p>
+    </div>
 
-  <section class="page-section about-clinic">
-    <h2>About Our Practice</h2>
-    <div class="about-clinic__grid">
-      {clinicBlurbs.map((blurb) => (
-        <div class="about-clinic__item">
-          <h3>{blurb.heading}</h3>
-          <p>{blurb.body}</p>
-        </div>
-      ))}
+    {doctors.length > 0 && (
+      <div class="team__group">
+        <h3 class="team__label">Our Veterinarian{doctors.length > 1 ? "s" : ""}</h3>
+        <DoctorGrid doctors={doctors} />
+      </div>
+    )}
+
+    {staff.length > 0 && (
+      <div class="team__group">
+        <h3 class="team__label">Our Staff</h3>
+        <StaffGrid staff={staff} />
+      </div>
+    )}
+  </section>
+
+  <section class="about-clinic">
+    <div class="page-section">
+      <h2>About Our Practice</h2>
+      <div class="about-clinic__grid">
+        {clinicBlurbs.map((blurb) => (
+          <div class="about-clinic__item">
+            <h3>{blurb.heading}</h3>
+            <p>{blurb.body}</p>
+          </div>
+        ))}
+      </div>
     </div>
   </section>
-
-  <section class="page-section about-staff">
-    <h2>About Our Team</h2>
-    <p class="about-staff__body">Dr. James Miller has led Durham Animal Hospital since 1997, after starting his career as an emergency veterinarian here in Durham. He and our small, close-knit team get to know each pet by name. Whether you're bringing in a new puppy or a senior cat, you'll be greeted by familiar faces who care about your pet as much as you do.</p>
-  </section>
-
-  {staff.length > 0 && (
-    <section class="page-section">
-      <h2>Our Staff</h2>
-      <StaffGrid staff={staff} />
-    </section>
-  )}
 </BaseLayout>
 
 <style>
@@ -75,5 +80,10 @@ const clinicBlurbs = [
   .about-clinic__item h3 { margin: 0 0 var(--space-xs); font-size: var(--font-size-md); color: var(--main); }
   .about-clinic__item p { margin: 0; color: var(--text-muted); }
 
-  .about-staff__body { max-width: 48rem; }
+  .about-staff__body { max-width: 48rem; font-size: var(--font-size-md); line-height: 1.7; }
+  .team__intro h2 { margin: var(--space-sm) 0 var(--space-md); font-size: var(--font-size-3xl); }
+  /* Doctors and staff sit in one section so the two groups read together. */
+  .team__group { margin-block-start: var(--space-xl); }
+  .team__label { margin: 0 0 var(--space-md); font-size: var(--font-size-xs); letter-spacing: 0.16em; text-transform: uppercase; color: var(--text-muted); }
+  .about-clinic { background: var(--solid-bg); }
 </style>
