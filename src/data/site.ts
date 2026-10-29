@@ -74,6 +74,11 @@ export interface SiteInfo {
   // use e.g. ["LocalBusiness", "ProfessionalService"]. A mobile business
   // also sets mobileVet + serviceAreaOfCoverage (→ areaServed).
   businessSchemaType?: string | string[];
+  // Google tag IDs (gtag.js). Loaded only on trackingHosts, so local and
+  // preview visits never reach the client's analytics.
+  ga4Id?: string; // e.g. "G-XXXXXXXXXX"
+  googleAdsId?: string; // e.g. "AW-1234567890"
+  trackingHosts?: string[]; // hostnames that load the tags, e.g. ["example.com", "www.example.com"]
 }
 
 // Placeholder example data — replace during client intake. Kept non-empty
@@ -116,4 +121,7 @@ export const siteInfo: SiteInfo = {
   url: "https://durhamanimalhospital.com",
   logoWhite: "/logo-white.png",
   logoColor: "/logo-color.png",
+  // The client's existing GA4 property (from the old site), so reporting continues after launch.
+  ga4Id: "G-V3QHBQNN7Y",
+  trackingHosts: ["durhamanimalhospital.com", "www.durhamanimalhospital.com"],
 };

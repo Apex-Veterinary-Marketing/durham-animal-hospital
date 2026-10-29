@@ -1,0 +1,4 @@
+---
+name: "R. J. R."
+testimonial: "I never have to worry about my dog’s care when we visit Durham Animal Hospital. I walk in and I’m greeted with the sweetest of smiles as if I am a family friend. Dr. Miller is very thorough to make sure all problems are addressed and will take the time to sit down and talk me through all the steps I need to ensure my dog is properly cared for. My dog gets so excited when we visit instead of getting anxious, which is rare when we go out. They’re the best! 2 years later… My dog passed away of old age recently. I just wanted to say thank you for taking care of Brutus and me over these last couple years. Brutus loved visiting you guys and you guys made me feel like I was a part of your family. Don’t worry, my patronage here has not ended. When I decide my heart is ready, I know exactly where to bring my pet. Thank you for your kindness."
+---

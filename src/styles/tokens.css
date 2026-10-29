@@ -105,27 +105,36 @@
   --space-lg: 1.5rem;
   --space-xl: 3rem;
   --space-2xl: 4rem;
+  --space-3xl: 6.5rem; /* Durham: section padding on large screens */
 
   /* Type */
-  --font-body: "Inter", system-ui, sans-serif; /* loaded by styles/fonts.css — per-client: swap both, see that file */
-  --font-heading: var(--font-body);
+  --font-body: "Figtree", system-ui, sans-serif; /* loaded by styles/fonts.css — per-client: swap both, see that file */
+  --font-heading: "Outfit", "Figtree", system-ui, sans-serif;
   --font-size-xs: 0.75rem;
   --font-size-sm: 0.875rem;
   --font-size-md: 1.1rem;
   --font-size-lg: 1.25rem;
   --font-size-3xl: 2.25rem;
   --font-size-4xl: 2.75rem;
+  --font-size-2xl: 1.75rem; /* Durham: card and pillar titles */
+  --font-size-hero: clamp(2.6rem, 1.6rem + 4vw, 4.75rem); /* Durham: homepage H1 */
+  --font-size-display: clamp(3rem, 1.5rem + 6vw, 6.5rem); /* Durham: option B oversized hero headline */
+  --font-size-section: clamp(2rem, 1.4rem + 2.2vw, 3.1rem); /* Durham: homepage H2 */
+  --font-serif: "Fraunces", Georgia, serif; /* Durham: option B headings */
 
   /* Radius */
   --radius-sm: 3px;
   --radius-md: 6px;
   --radius-lg: 10px;
+  --radius-xl: 1.75rem; /* Durham: large cards and photo frames */
+  --radius-pill: 999px; /* Durham: pill buttons, eyebrow tags, chips */
 
   /* Shadows — all built from the Base --shadow color */
   --shadow-header: 0 1px 4px var(--shadow);
   --shadow-card: 0 1px 6px var(--shadow);
   --shadow-dropdown: 0 4px 12px var(--shadow);
   --shadow-float: 0 2px 8px var(--shadow), 0 1px 3px var(--shadow); /* floating widgets: pills, raised call button */
+  --shadow-soft: 0 30px 60px -30px var(--shadow), 0 8px 20px -12px var(--shadow); /* Durham: diffuse lift for cards and frames */
   --shadow-callbar: 0 -2px 8px var(--shadow); /* bar pinned to the bottom edge (shadow points up) */
 
   /* Containers */
@@ -139,8 +148,8 @@
    */
   --header-height: 6.5rem; /* fixed header incl. utility bar; heroes pad by this */
   --callbar-height: 5.5rem; /* mobile call bar; BaseLayout pads <main> by this */
-  --logo-height: 2.5rem;
-  --page-header-height: 16rem; /* PageHeaderBanner min-height */
+  --logo-height: 3.25rem; /* Durham: horizontal logo with tagline needs the extra height to stay legible */
+  --page-header-height: 31.25rem; /* PageHeaderBanner min-height — Durham: at least 500px (Constanza) */
   --reviews-pill-left: 5.5em; /* ReviewsBand offset, sits right of the a11y button */
 
   /*
@@ -153,6 +162,7 @@
   --motion-duration-fast: 150ms; /* small state changes: color, opacity */
   --motion-duration-base: 200ms; /* hovers, toggles (the V2.5 default) */
   --motion-duration-slow: 300ms; /* larger hovers, menus, modals */
+  --motion-duration-hero: 1.6s; /* Durham: homepage hero photo crossfade */
   --motion-duration-reveal: 600ms; /* scroll-reveal entrance */
   --motion-ease: cubic-bezier(0.4, 0, 0.2, 1); /* in-out; state changes */
   --motion-ease-out: cubic-bezier(0.16, 1, 0.3, 1); /* decelerate; entrances */

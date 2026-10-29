@@ -1,0 +1,39 @@
+// Homepage content (src/components/home/).
+// Copy is agency-written from the onboarding form and intake — a draft for
+// the client to review, not their own words.
+import { getSiteInfo } from "./site";
+import { getFeaturedServices } from "./services";
+import { getAllDoctors } from "./doctors";
+
+export async function getHomeData() {
+  const site = await getSiteInfo();
+  const featured = await getFeaturedServices();
+  const doctors = await getAllDoctors();
+  const doctor = doctors.find((d) => d.data.showOnHome) ?? doctors[0];
+
+  const services = featured.map((s) => ({
+    href: `/services/${s.id}`,
+    label: s.data.featuredHeading || s.data.customName || s.data.name,
+    blurb: s.data.featuredText ?? "",
+    icon: s.data.serviceIcon,
+    image: s.data.pageHeaderImage,
+    imageAlt: s.data.pageHeaderImageAlt ?? "",
+  }));
+
+  return {
+    site,
+    services,
+    doctor,
+    headline: "Where pets are family.",
+    lede: "Wellness exams, dental care and surgery for Durham dogs and cats, from Dr. James Miller and a small team that knows your pet by name.",
+    // The homepage's one set of highlights (hero pills) — don't repeat them elsewhere on the page.
+    highlights: ["Same-day sick visits when we can", "Digital X-rays and in-house lab", "Dogs and cats, puppy to senior"],
+    welcome: [
+      "For nearly three decades, Durham Animal Hospital has cared for the dogs and cats of Durham and nearby towns like Rougemont, Creedmoor and Hillsborough.",
+      "Dr. James Miller and our small team know many of our patients from their first puppy and kitten visits through their senior years, and we take the time to explain every option so you can make the right choice for your pet.",
+    ],
+    payment: "We accept cash, credit and debit cards, CareCredit and Cherry financing, and work with Trupanion pet insurance.",
+    landmark: "Directly behind Captain D's",
+    serviceArea: (site.serviceAreaOfCoverage ?? "").split(",").map((t) => t.trim()).filter(Boolean),
+  };
+}
