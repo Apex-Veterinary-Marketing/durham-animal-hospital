@@ -24,6 +24,9 @@ export async function getHomeData() {
     site,
     services,
     doctor,
+    // Hero background video (agency stock, mirrored so the dog is opposite the text).
+    // position = object-position on wide screens, aimed at the dog.
+    heroVideo: { src: "/video/durham-hero.mp4", poster: "/video/durham-hero-poster.jpg", position: "60% 25%" },
     headline: "Where pets are family.",
     lede: "Wellness exams, dental care and surgery for Durham dogs and cats, from Dr. James Miller and a small team that knows your pet by name.",
     // The homepage's one set of highlights (hero pills) — don't repeat them elsewhere on the page.

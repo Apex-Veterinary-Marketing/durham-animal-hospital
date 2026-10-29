@@ -53,6 +53,7 @@ export interface SiteInfo {
   googleReviewCount?: number;
   logoColor?: string; // asset path
   logoWhite?: string; // asset path
+  logoFooter?: string; // asset path — logo variant for the dark footer (falls back to logoWhite)
   footerAbout?: string; // ~160-char practice blurb, Footer's About Us column
   cityState?: string; // "[CITY, ST]" display string
   googleWidgetId?: string;
@@ -122,6 +123,7 @@ export const siteInfo: SiteInfo = {
   url: "https://durhamanimalhospital.com",
   logoWhite: "/logo-white.png",
   logoColor: "/logo-color.png",
+  logoFooter: "/logo-footer.png",
   // The client's existing GA4 property (from the old site), so reporting continues after launch.
   ga4Id: "G-V3QHBQNN7Y",
   trackingHosts: ["durhamanimalhospital.com", "www.durhamanimalhospital.com"],

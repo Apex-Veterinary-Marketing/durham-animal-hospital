@@ -1,8 +1,7 @@
 ---
-// Durham homepage: a full-screen hero whose background crossfades through
-// three photos (Constanza: a background video or slider, as on her other
-// launches; the client's own photos are off-limits, so these are agency
-// stock), hero pills as the ONE place the practice's highlights appear
+// Durham homepage: a full-height background-video hero (agency stock
+// footage, mirrored so the dog sits opposite the text; on phones the video
+// shows uncropped above the text, so the dog is never cut off), hero pills as the ONE place the practice's highlights appear
 // (no separate stat strip or floating note repeating them), then welcome,
 // services, Dr. Miller and the visit block with payment logos.
 import { Image } from "astro:assets";
@@ -12,39 +11,21 @@ import { initialsOf } from "../../lib/utils/initials";
 import HomeVisit from "./HomeVisit.astro";
 import TestimonialSlider from "../TestimonialSlider.astro";
 import { getAllTestimonials } from "../../lib/data/testimonials";
-import slide1 from "../../assets/durham/lab-and-tabby-in-grass.jpg";
-import slide2 from "../../assets/durham/kitten-and-puppy-cuddling.jpg";
-import slide3 from "../../assets/durham/cat-and-golden-dog.jpg";
 import welcomePhoto from "../../assets/durham/french-bulldog-on-lap.jpg";
 
-const { site, services, doctor, headline, lede, highlights, welcome } = await getHomeData();
+const { site, services, doctor, headline, lede, highlights, welcome, heroVideo } = await getHomeData();
 // Real reviews from the client's old Reviews page; strongest and most recent first.
 const REVIEW_ORDER = ["benjamin-g", "will-h", "meg-r", "john-b", "kyli-k", "claire-c"];
 const reviews = (await getAllTestimonials())
   .filter((t) => REVIEW_ORDER.includes(t.id))
   .sort((a, b) => REVIEW_ORDER.indexOf(a.id) - REVIEW_ORDER.indexOf(b.id));
-const slides = [
-  { src: slide1, position: "35% 45%" },
-  { src: slide2, position: "50% 40%" },
-  { src: slide3, position: "60% 50%" },
-];
 ---
 
 <div class="home">
-  <section class="a-hero" data-hero-slider>
-    <div class="a-hero__slides" aria-hidden="true">
-      {slides.map((s, i) => (
-        <Image
-          src={s.src}
-          alt=""
-          widths={[960, 1440, 1920]}
-          sizes="100vw"
-          class:list={["a-hero__slide", i === 0 && "is-active"]}
-          style={`object-position: ${s.position}`}
-          loading={i === 0 ? "eager" : "lazy"}
-        />
-      ))}
-    </div>
+  <section class="a-hero">
+    <video class="a-hero__video" style={`object-position: ${heroVideo.position}`} autoplay muted loop playsinline preload="metadata" poster={heroVideo.poster} aria-hidden="true">
+      <source src={heroVideo.src} type="video/mp4" />
+    </video>
     <div class="a-hero__scrim" aria-hidden="true"></div>
     <div class="a-hero__inner">
       <span class="eyebrow eyebrow--on-dark" data-animate="fade">Veterinary hospital &middot; Durham, NC</span>
@@ -117,26 +98,18 @@ const slides = [
         <h2 class="a-h2">What Durham pet owners say</h2>
       </div>
       <TestimonialSlider testimonials={reviews.map((t) => ({ name: t.data.name, testimonial: t.data.testimonial }))} />
+      <div class="a-center a-reviews__actions">
+        {site.googleReviewsLink && (
+          <a class="btn btn--cta btn--has-icon" href={site.googleReviewsLink} target="_blank" rel="noopener">Leave us a Google review <span class="btn__icon" aria-hidden="true">&rarr;</span></a>
+        )}
+        <a class="btn btn--outline" href="/reviews">Read all reviews</a>
+      </div>
     </section>
   )}
 
   <HomeVisit tone="soft" />
 </div>
 
-<script>
-  // Crossfade the hero photos. Skipped for reduced-motion users (first photo stays).
-  const hero = document.querySelector<HTMLElement>("[data-hero-slider]");
-  const slides = hero ? [...hero.querySelectorAll<HTMLElement>(".a-hero__slide")] : [];
-  if (slides.length > 1 && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-    let current = 0;
-    setInterval(() => {
-      if (document.hidden) return;
-      slides[current].classList.remove("is-active");
-      current = (current + 1) % slides.length;
-      slides[current].classList.add("is-active");
-    }, 6000);
-  }
-</script>
 
 <style>
   .a-h2 { font-size: var(--font-size-section); line-height: 1.1; letter-spacing: -0.01em; margin: var(--space-md) 0 var(--space-lg); }
@@ -145,9 +118,8 @@ const slides = [
 
   /* Hero */
   .a-hero { position: relative; min-height: 100dvh; display: flex; align-items: center; color: var(--white); overflow: hidden; background: var(--main-dark); }
-  .a-hero__slides { position: absolute; inset: 0; }
-  .a-hero__slide { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity var(--motion-duration-hero) var(--motion-ease); }
-  .a-hero__slide.is-active { opacity: 1; }
+  /* Full viewport height; the focal point (the dog) is set per site in home.ts. */
+  .a-hero__video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
   .a-hero__scrim { position: absolute; inset: 0; background: linear-gradient(90deg, var(--alt-bg) 0%, var(--main-o50) 55%, transparent 100%); }
   .a-hero__inner { position: relative; width: 100%; max-width: var(--container-max); margin-inline: auto; padding: calc(var(--header-height) + var(--space-xl)) var(--space-md) var(--space-3xl); }
   .a-hero__title { color: inherit; font-size: var(--font-size-hero); line-height: 1.02; letter-spacing: -0.02em; margin: var(--space-lg) 0; max-width: 13ch; }
@@ -181,6 +153,7 @@ const slides = [
 
   /* Reviews */
   .a-reviews { background: var(--white); padding: var(--space-3xl) var(--space-md); }
+  .a-reviews__actions { display: flex; flex-wrap: wrap; justify-content: center; gap: var(--space-sm); }
 
   /* Doctor */
   .a-doctor { background: var(--main); color: var(--white); padding: var(--space-3xl) var(--space-md); }
@@ -195,6 +168,13 @@ const slides = [
     .a-doctor__inner { grid-template-columns: 1fr; text-align: center; }
     .a-doctor__portrait { width: 12rem; margin-inline: auto; }
     .a-hero__scrim { background: var(--alt-bg); }
+  }
+  /* Phones: show the whole 16:9 video (dog uncropped) above the text; the hero still fills the screen. */
+  @media (max-width: 767px) {
+    .a-hero { flex-direction: column; align-items: stretch; justify-content: flex-start; }
+    .a-hero__video { position: relative; inset: auto; height: auto; aspect-ratio: 16 / 9; margin-block-start: calc(var(--header-height) + var(--space-sm)); }
+    .a-hero__scrim { display: none; }
+    .a-hero__inner { padding-block-start: var(--space-xl); }
   }
   @media (max-width: 767px) {
     .a-welcome, .a-services, .a-doctor { padding-block: var(--space-2xl); }
