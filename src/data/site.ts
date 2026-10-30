@@ -122,11 +122,10 @@ export const siteInfo: SiteInfo = {
     "https://maps.google.com/maps?q=Durham+Animal+Hospital%2C+4306+N+Roxboro+St%2C+Durham%2C+NC+27704&output=embed",
   serviceAreaOfCoverage:
     "Durham, Rougemont, Hurdle Mills, Creedmoor, Roxboro, Chapel Hill, Raleigh, Hillsborough",
-  // Appointments go through the client's TheVetHero portal (Constanza, 2026-10-29).
-  bookingUrl: "https://pp.thevethero.com/durham-animal-hospital/login",
-  bookingLabel: "Book an Appointment",
-  portalUrl: "https://pp.thevethero.com/durham-animal-hospital/login",
-  portalLabel: "Client Portal",
+  // Client (Pastel, 2026-10-30): "remove portal for now" — booking uses our appointment request form.
+  bookingUrl: "/appointment-request",
+  bookingLabel: "Request an Appointment",
+  // portalUrl / portalLabel: set again when the portal comes back (switching to Pulse).
   businessDescription:
     "Durham Animal Hospital is a full-service veterinary hospital in Durham, NC, caring for dogs and cats since 1996 with wellness exams, diagnostics, dentistry and surgery.",
   openingHoursSpecification: [
