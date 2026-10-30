@@ -46,19 +46,20 @@
 // Leave a key out (or empty) and that form renders GravityFormEmbed's
 // placeholder instead — safe to fill these in one at a time during client
 // intake, never blocks a build.
-// Durham's forms on onboarding.apexveterinarymarketing.com (2026-10-29).
-// Appointments go through the TheVetHero portal, so form 781 (Appointment
-// Request) isn't embedded.
+// Durham's forms on onboarding.apexveterinarymarketing.com, recreated
+// 2026-10-30 after a server restore wiped the originals (old IDs 781-788 now
+// belong to other practices). Each form has the iframe embed enabled and its
+// Admin Notification going to the practice's appointments@ inbox.
 const gfScript = `<script src="//onboarding.apexveterinarymarketing.com/wp-content/plugins/gravity-forms-iframe-master/assets/scripts/gfembed.min.js" type="text/javascript"></script>`;
 
 export const gravityFormEmbeds: Record<string, string> = {
-  // Appointment Request (781) — /appointment-request (portal removed for now, Pastel 2026-10-30).
-  "appointment-request": `<iframe src="//onboarding.apexveterinarymarketing.com/gfembed/?f=781" title="Appointment request form" width="100%" height="500" frameBorder="0" class="gfiframe"></iframe>${gfScript}`,
-  // General Request Form (782) — /contact-us, the sitewide contact modal and /general-information-request.
-  contact: `<iframe src="//onboarding.apexveterinarymarketing.com/gfembed/?f=782" title="Contact form" width="100%" height="500" frameBorder="0" class="gfiframe"></iframe>${gfScript}`,
-  "general-information-request": `<iframe src="//onboarding.apexveterinarymarketing.com/gfembed/?f=782" title="General information request form" width="100%" height="500" frameBorder="0" class="gfiframe"></iframe>${gfScript}`,
-  // How'd We Do? (783) — ReputationWidget's negative-feedback stage.
-  "reputation-feedback": `<iframe src="//onboarding.apexveterinarymarketing.com/gfembed/?f=783" title="Feedback form" width="100%" height="500" frameBorder="0" class="gfiframe"></iframe>${gfScript}`,
-  // New Patient Form (784) — the old site's "Registration" and "New Client" form; /online-forms.
-  "new-patient": `<iframe src="//onboarding.apexveterinarymarketing.com/gfembed/?f=784" title="New client registration form" width="100%" height="500" frameBorder="0" class="gfiframe"></iframe>${gfScript}`,
+  // Appointment Request (787) — /appointment-request (portal removed for now, Pastel 2026-10-30).
+  "appointment-request": `<iframe src="//onboarding.apexveterinarymarketing.com/gfembed/?f=787" title="Appointment request form" width="100%" height="500" frameBorder="0" class="gfiframe"></iframe>${gfScript}`,
+  // General Request Form (788) — /contact-us, the sitewide contact modal and /general-information-request.
+  contact: `<iframe src="//onboarding.apexveterinarymarketing.com/gfembed/?f=788" title="Contact form" width="100%" height="500" frameBorder="0" class="gfiframe"></iframe>${gfScript}`,
+  "general-information-request": `<iframe src="//onboarding.apexveterinarymarketing.com/gfembed/?f=788" title="General information request form" width="100%" height="500" frameBorder="0" class="gfiframe"></iframe>${gfScript}`,
+  // How'd We Do? (789) — ReputationWidget's negative-feedback stage.
+  "reputation-feedback": `<iframe src="//onboarding.apexveterinarymarketing.com/gfembed/?f=789" title="Feedback form" width="100%" height="500" frameBorder="0" class="gfiframe"></iframe>${gfScript}`,
+  // New Patient Form (790) — the old site's "Registration" and "New Client" form; /online-forms.
+  "new-patient": `<iframe src="//onboarding.apexveterinarymarketing.com/gfembed/?f=790" title="New client registration form" width="100%" height="500" frameBorder="0" class="gfiframe"></iframe>${gfScript}`,
 };
